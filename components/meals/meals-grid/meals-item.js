@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import classes from './meal-item.module.css';
+import logo from '@/assets/icons/meal.png';
 
 export default function MealItem({ title, slug, image, summary, creator }) {
   return (
@@ -9,6 +10,7 @@ export default function MealItem({ title, slug, image, summary, creator }) {
       <header>
         <div className={classes.image}>
           <Image src={image} alt={title} fill />
+          {/* <Image src={logo} alt={title} fill /> */}
         </div>
         <div className={classes.headerText}>
           <h2>{title}</h2>

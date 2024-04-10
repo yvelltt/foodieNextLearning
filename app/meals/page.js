@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 import classes from './page.module.css';
-import MealsGrid from '@/components/meals/meals-grid/meals-item';
+import MealsGrid from '@/components/meals/meals-grid/meals-grid';
 import { getMeals } from '@/libs/meals';
 
 export default async function MealsPage() {
@@ -23,8 +23,7 @@ export default async function MealsPage() {
                 </p>
             </header>
             <main className={classes.main}>
-                <MealsGrid meals={ [meals] }></MealsGrid>
+                <MealsGrid meals={ meals }></MealsGrid>
             </main></>
-
     );
 }
