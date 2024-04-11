@@ -25,8 +25,8 @@ export default async function MealPostPage({ params }) {
                 <div className={classes.headerText}>
                     <h1>{meal.title}</h1>
                     <p className={classes.creator}>
-                        by<a href={`mailto:${'EMAIL'}`}>
-                            Name
+                        by <a href={`mailto:${'EMAIL'}`}>
+                            {meal.creator}
                         </a>
                     </p>
                     <p className={classes.summary}>
