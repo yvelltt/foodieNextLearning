@@ -2,10 +2,7 @@ import classes from './page.module.css';
 import ImagePicker from '@/components/meals/image-picker/image-picker';
 
 export default function ShareMealPage() {
-  async function shareMeal() {
-    'use server';
-  }
-
+  
   return (
     <>
       <header className={classes.header}>
@@ -43,7 +40,7 @@ export default function ShareMealPage() {
               required
             ></textarea>
           </p>
-          <ImagePicker></ImagePicker>
+          <ImagePicker label="Your image" name="image" required/>
           <p className={classes.actions}>
             <button type="submit">Share Meal</button>
           </p>
