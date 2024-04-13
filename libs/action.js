@@ -1,4 +1,6 @@
 'use server';
+import { redirect } from "next/navigation";
+import { saveModel } from "./meals";
 
 export async function shareMeal(formData) {
     const meal = {
@@ -9,5 +11,8 @@ export async function shareMeal(formData) {
         creator: formData.get('name'),
         creator_email: formData.get('email'),
     }
-    console.log('meal', meal, '-------');
+
+    await saveModel(meal);
+
+    redirect('/meals');
 }
